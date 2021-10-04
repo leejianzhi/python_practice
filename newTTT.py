@@ -1,35 +1,58 @@
+
 def check_input():
 
-    choice = " "
+    choice = " " #initial choice
 
 
-    while choice not in ['0','1','2','3','4','5','6','7','8','9']:
+    while choice not in ['1','2','3','4','5','6','7','8','9']:
         choice = input("Please input a digital number through 1 - 10 to please on the position: ")
-        print_board(choice)
 
-        if choice not in ['0','1','2','3','4','5','6','7','8','9']:
+        if choice not in ['1','2','3','4','5','6','7','8','9']:
             print("Invalid input, please enter again.")
 
-
-def print_board(choice):
-
-    line_1 = ['0','1','2']
-    line_2 = ['3','4','5']
-    line_3 = ['6','7','8']
-
-    print(line_1)
-    print(line_2)
-    print(line_3)
-
-    if(choice == 0):
-        choice = line_1[0]
-
-    print(line_1)
-    print(line_2)
-    print(line_3)
+    return int(choice)
 
 
+
+def user_input(print_board,position):
+
+    user_choice = input("Enter a X or O to make your move: ")
+
+    print_board[position] = user_choice
+
+    print(print_board[0:3])
+    print(print_board[3:6])
+    print(print_board[6:9])
+
+
+def gameon_choice():
+
+    choice = " " #initial choice
+
+
+    while choice not in ['Y','N']:
+        choice = input("Do you want continue play? (Y or N): ")
+
+        if choice not in ['Y','N']:
+            print("Invalid input, please enter again.")
+
+    if choice == "Y":
+        return True
+
+    else:
+        return False
 
 
 if __name__ == "__main__":
-    check_input()
+
+    board = ['1','2','3','4','5','6','7','8','9']
+    gameon = True
+
+    while gameon:
+
+
+        position = check_input()
+
+        user_input(board,position)
+
+        gameon = gameon_choice()
