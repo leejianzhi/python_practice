@@ -23,9 +23,7 @@ def user_input(print_board,position):
     user_choice = input("Enter a X(Player1) or O(Player2) to make your move: ")
 
     if user_choice == 'X':
-        user_choice = 'X''
-
-
+        player1_choice = 'X'
         print_board[position] = player1_choice
 
         print(print_board[0:3])
@@ -33,16 +31,19 @@ def user_input(print_board,position):
         print(print_board[6:9])
 
 
-    else:
-        player2_chocie = 'O'
-        user_choice = player2_chocie
+    if player1_choice:
 
+        print("Player2, it is your turn to choose a postion to make a move.")
+        position = check_input()
+        player2_choice = 'O'
         print_board[position] = player2_choice
 
         print(print_board[0:3])
         print(print_board[3:6])
         print(print_board[6:9])
 
+    else:
+        print('Player1 does not make a move yet.')
 
 
 def gameon_choice():
