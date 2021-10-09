@@ -4,10 +4,11 @@ def check_input():
     choice = " " #initial choice
 
 
-    while choice not in ['1','2','3','4','5','6','7','8','9']:
-        choice = input("Please input a digital number through 1 - 10 to please on the position: ")
+    while choice not in range(0,9):
+        choice = int(input("Please input a digital number through 1 - 9 to please on the position: "))
+        choice = choice - 1
 
-        if choice not in ['1','2','3','4','5','6','7','8','9']:
+        if choice not in range(0,9):
             print("Invalid input, please enter again.")
 
     return int(choice)
@@ -16,13 +17,32 @@ def check_input():
 
 def user_input(print_board,position):
 
-    user_choice = input("Enter a X or O to make your move: ")
+    player1_choice = ' '
+    player2_chocie = ' '
 
-    print_board[position] = user_choice
+    user_choice = input("Enter a X(Player1) or O(Player2) to make your move: ")
 
-    print(print_board[0:3])
-    print(print_board[3:6])
-    print(print_board[6:9])
+    if user_choice == 'X':
+        user_choice = 'X''
+
+
+        print_board[position] = player1_choice
+
+        print(print_board[0:3])
+        print(print_board[3:6])
+        print(print_board[6:9])
+
+
+    else:
+        player2_chocie = 'O'
+        user_choice = player2_chocie
+
+        print_board[position] = player2_choice
+
+        print(print_board[0:3])
+        print(print_board[3:6])
+        print(print_board[6:9])
+
 
 
 def gameon_choice():
