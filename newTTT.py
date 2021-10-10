@@ -19,9 +19,9 @@ def user_input(print_board,position):
 
     player1_choice = ' '
     player2_chocie = ' '
-
+#The code logic is not complete,
     user_choice = input("Enter a X(Player1) or O(Player2) to make your move: ")
-
+#there is a improvment that makes display board as a function that will clear up the code a little bit
     if user_choice == 'X':
         player1_choice = 'X'
         print_board[position] = player1_choice
@@ -29,21 +29,24 @@ def user_input(print_board,position):
         print(print_board[0:3])
         print(print_board[3:6])
         print(print_board[6:9])
+        who_is_winner(print_board)
 
-
+    #if player1 has been take a move
     if player1_choice:
 
         print("Player2, it is your turn to choose a postion to make a move.")
         position = check_input()
         player2_choice = 'O'
         print_board[position] = player2_choice
-
         print(print_board[0:3])
         print(print_board[3:6])
         print(print_board[6:9])
 
+        who_is_winner(print_board)
+
     else:
         print('Player1 does not make a move yet.')
+
 
 
 def gameon_choice():
@@ -62,6 +65,43 @@ def gameon_choice():
 
     else:
         return False
+
+#check who is the winner
+def who_is_winner(gameon_board):
+
+    winner = True
+
+    while winner:
+
+        for i in gameon_board[0:8]:
+            if gameon_board[0] == gameon_board[1] == gameon_board[2]:
+                #This method to print out the winner is not smart
+                #needs improve later
+                print("Winner is Player with", gameon_board[0])
+                return True
+            elif gameon_board[3] == gameon_board[4] == gameon_board[5]:
+                print("Winner is Player with", gameon_board[3])
+                return True
+            elif gameon_board[6] == gameon_board[7] == gameon_board[8]:
+                print("Winner is Player with", gameon_board[6])
+                return True
+            elif gameon_board[0] == gameon_board[3] == gameon_board[6]:
+                print("Winner is Player with", gameon_board[0])
+                return True
+            elif gameon_board[1] == gameon_board[4] == gameon_board[7]:
+                print("Winner is Player with", gameon_board[1])
+                return True
+            elif gameon_board[2] == gameon_board[5] == gameon_board[8]:
+                print("Winner is Player with", gameon_board[2])
+                return True
+            elif gameon_board[1] == gameon_board[4] == gameon_board[8]:
+                print("Winner is Player with", gameon_board[1])
+                return True
+            elif gameon_board[2] == gameon_board[4] == gameon_board[7]:
+                print("Winner is Player with", gameon_board[2])
+                return True
+            else:
+                return False
 
 
 if __name__ == "__main__":
