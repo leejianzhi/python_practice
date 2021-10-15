@@ -15,14 +15,16 @@ def check_input():
 
 
 
-def user_input(print_board,position):
+def user_input(print_board,choice):
 
     player1_choice = ' '
     player2_chocie = ' '
 #The code logic is not complete,
-    user_choice = input("Enter a X(Player1) or O(Player2) to make your move: ")
+
 #there is a improvment that makes display board as a function that will clear up the code a little bit
-    if user_choice == 'X':
+    if user_choice == 1:
+        print("Player1, it is your turn to choose a postion to make a move.")
+        position = check_input()
         player1_choice = 'X'
         print_board[position] = player1_choice
 
@@ -87,6 +89,7 @@ def who_is_winner(gameon_board):
                 return True
             elif gameon_board[0] == gameon_board[3] == gameon_board[6]:
                 print("Winner is Player with", gameon_board[0])
+                #break
                 return True
             elif gameon_board[1] == gameon_board[4] == gameon_board[7]:
                 print("Winner is Player with", gameon_board[1])
@@ -104,16 +107,18 @@ def who_is_winner(gameon_board):
                 return False
 
 
+
+
 if __name__ == "__main__":
 
     board = ['1','2','3','4','5','6','7','8','9']
     gameon = True
 
+    user_choice = int(input("Please Enter 1 for Player1(X), Enter 2 for Player2(O) "))
+
     while gameon:
 
 
-        position = check_input()
-
-        user_input(board,position)
+        user_input(board,user_choice)
 
         gameon = gameon_choice()
