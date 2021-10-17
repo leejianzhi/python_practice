@@ -1,3 +1,5 @@
+import sys
+
 
 def check_input():
 
@@ -68,6 +70,20 @@ def gameon_choice():
     else:
         return False
 
+def if_continue():
+
+    choice = input("Please Enter Y to play again or N to exit the game: ")
+
+    if choice == 'Y':
+        print('The game will start over again. Thanks for play.')
+        user_input()
+
+
+    else:
+        print('Thanks for your time to play this game.')
+        sys.exit()
+
+
 #check who is the winner
 def who_is_winner(gameon_board):
 
@@ -75,11 +91,12 @@ def who_is_winner(gameon_board):
 
     while winner:
 
-        for i in gameon_board[0:8]:
+        for i in gameon_board[0:8]: #遍历board
             if gameon_board[0] == gameon_board[1] == gameon_board[2]:
                 #This method to print out the winner is not smart
                 #needs improve later
                 print("Winner is Player with", gameon_board[0])
+                if_continue()
                 return True
             elif gameon_board[3] == gameon_board[4] == gameon_board[5]:
                 print("Winner is Player with", gameon_board[3])
