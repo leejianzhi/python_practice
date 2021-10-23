@@ -17,18 +17,21 @@ def check_input():
 
 
 
-def user_input(print_board,choice):
+def user_input(board,choose_player):
 
-    player1_choice = ' '
-    player2_chocie = ' '
+    player1_move = ' '
+    player2_move = ' '
+    print_board = board
 #The code logic is not complete,
 
 #there is a improvment that makes display board as a function that will clear up the code a little bit
-    if user_choice == 1:
+    if choose_player == 1:
         print("Player1, it is your turn to choose a postion to make a move.")
         position = check_input()
-        player1_choice = 'X'
-        print_board[position] = player1_choice
+        print("!!!The position is", position)
+        player1_move = 'X'
+        print("!!!!!The move is",player1_move)
+        print_board[position] = player1_move
 
         print(print_board[0:3])
         print(print_board[3:6])
@@ -36,12 +39,11 @@ def user_input(print_board,choice):
         who_is_winner(print_board)
 
     #if player1 has been take a move
-    if player1_choice:
-
+    if choose_player:
         print("Player2, it is your turn to choose a postion to make a move.")
         position = check_input()
-        player2_choice = 'O'
-        print_board[position] = player2_choice
+        player2_move = 'O'
+        print_board[position] = player2_move
         print(print_board[0:3])
         print(print_board[3:6])
         print(print_board[6:9])
@@ -76,7 +78,7 @@ def if_continue():
 
     if choice == 'Y':
         print('The game will start over again. Thanks for play.')
-        user_input()
+        user_input(print_board,choice)
 
 
     else:
@@ -128,13 +130,14 @@ def who_is_winner(gameon_board):
 
 if __name__ == "__main__":
 
+    user_choice = int(input("Please Enter 1 for Player1(X), Enter 2 for Player2(O): "))
+    print('The type of the user choice is: ', user_choice)
+
     board = ['1','2','3','4','5','6','7','8','9']
     gameon = True
 
-    user_choice = int(input("Please Enter 1 for Player1(X), Enter 2 for Player2(O) "))
 
     while gameon:
-
 
         user_input(board,user_choice)
 
