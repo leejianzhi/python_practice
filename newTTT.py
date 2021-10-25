@@ -1,4 +1,7 @@
 import sys
+from IPython.display import clear_output
+#A library can clear the game board everytime that allowed the paorgram only display
+#one board instead of display multiple boards from different move
 
 
 def check_input():
@@ -28,9 +31,9 @@ def user_input(board,choose_player):
     if choose_player == 1:
         print("Player1, it is your turn to choose a postion to make a move.")
         position = check_input()
-        print("!!!The position is", position)
+        #print("!!!The position is", position)
         player1_move = 'X'
-        print("!!!!!The move is",player1_move)
+        #print("!!!!!The move is",player1_move)
         print_board[position] = player1_move
 
         print(print_board[0:3])
@@ -49,6 +52,7 @@ def user_input(board,choose_player):
         print(print_board[6:9])
 
         who_is_winner(print_board)
+
 
     else:
         print('Player1 does not make a move yet.')
