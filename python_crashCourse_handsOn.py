@@ -23,8 +23,29 @@ def chapter_2():
 	print(user_name.title() + " said, if you do not make all the effort for living today, you will fell sorry tomorrow")
 
 
+def list_del_pop_remove():
+
+	del_list = ["one","two","three","four","five"]
+	pop_list = ["one","two","three","four","five"]
+	remove_list = ["one","two","three","four","five"]
+
+	del del_list[0]
+	print("\n")
+	print("The list after DELETE operation is:",del_list,"\n")
+
+	pop_ele = pop_list.pop()
+
+	print("The element has been popped is: ",pop_ele,"\n")
+	print("The current list after pop is: ",pop_list,"\n")
+
+	what_remove = 'one'
+	remove_list.remove(what_remove)
+	print('The list after remove operation is', remove_list,"\n")
+
+	print('The element you removed is',what_remove)
+
 
 if __name__ == "__main__":
 
-	
-	chapter_2()
+
+	list_del_pop_remove()
