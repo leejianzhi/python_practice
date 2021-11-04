@@ -44,8 +44,23 @@ def list_del_pop_remove():
 
 	print('The element you removed is',what_remove)
 
+def list_operation():
+
+	wish_to_travel = ["harbin","beijing","quzhou","malaixiya","guangzhou"]
+
+	print("I wish to travel in the list of those cities", wish_to_travel)
+
+
+
+	print("Sorted List",sorted(wish_to_travel))
+
+	print("The original list is",wish_to_travel)
+
+	#reverse_list = wish_to_travel.sort(reverse=True)
+
+	print("Reverse sorted list is : ", sorted(wish_to_travel,reverse=True))
 
 if __name__ == "__main__":
 
 
-	list_del_pop_remove()
+	list_operation()
