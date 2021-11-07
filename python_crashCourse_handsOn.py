@@ -60,7 +60,15 @@ def list_operation():
 
 	print("Reverse sorted list is : ", sorted(wish_to_travel,reverse=True))
 
+
+def for_loop():
+
+	new_list = ["one","two","three","four","five"]
+
+	for i in new_list:
+		print(i)
+
 if __name__ == "__main__":
 
 
-	list_operation()
+	for_loop()
