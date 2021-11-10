@@ -68,7 +68,21 @@ def for_loop():
 	for i in new_list:
 		print(i)
 
+def chapter_4():
+
+	#use a for loop to print out 1 - 20
+
+	for num in range(1,21):
+
+		print(num)
+
+	#create a list with numer 1 to 1,000,000
+
+	million_list = list(range(1,1000001))
+
+	print(min(million_list),max(million_list),sum(million_list))
+
 if __name__ == "__main__":
 
 
-	for_loop()
+	chapter_4()
