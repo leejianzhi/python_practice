@@ -82,6 +82,55 @@ def chapter_4():
 
 	print(min(million_list),max(million_list),sum(million_list))
 
+
+	#sum the number 1 - 1000000
+
+	sum_nums = sum(range(1,1000001))
+
+	print("The sum of 1 to 1,000,000 is : ",sum_nums)
+
+	#print odd numbers from 1 - 20
+
+	prime_num = range(1,21,2)
+
+	for i in prime_num:
+		if i%2 == 1:
+			print("The odd number from 1 - 20 are: ",i)
+
+
+	# numbers in 3 - 30 can be divided by 3
+
+	divided_3 = range(3,31,3)
+
+	for i in divided_3:
+		if i%3 == 0:
+			print("Numbers can divided by 3 from 3 to 30 is: ",i)
+
+
+	#cube numbers
+
+	cube_num_list = range(1,11)
+
+	for i in cube_num_list:
+
+		i = i**3
+
+		print("The result of cube from number 1 to 10 is: ",i) 
+
+
+	#list comprehension
+
+	cube_com = [i**3 for i in range(1,11)]
+
+	
+
+
+
+	print("List comprehension test for cube numbers: ",cube_com)
+
+
+
+
 if __name__ == "__main__":
 
 
