@@ -130,8 +130,21 @@ def chapter_4():
 
 
 
+def list_slicing():
+
+	ex_list = ['1','2','3','4','5']
+
+	print("The original list is： ",ex_list)
+	print("The first element in the list is: ",ex_list[:1])
+	print("The second element in the list is: ",ex_list[1:2])
+	print("The third element in the list is: ",ex_list[2:3])
+	print("The fourth element in the list is: ",ex_list[3:4])
+	print(("The fifth element in the list is: ",ex_list[4:5]))
+	print("By using the '-'' sign to print all : ",ex_list[-5:])
+
+
 
 if __name__ == "__main__":
 
 
-	chapter_4()
+	list_slicing()
