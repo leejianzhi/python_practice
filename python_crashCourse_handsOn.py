@@ -143,6 +143,27 @@ def list_slicing():
 	print("By using the '-'' sign to print all : ",ex_list[-5:])
 
 
+	#chapter 4.4 hands on practice -- slicing
+	print("\n")
+	print("----------------Chapter 4.4 Hands On---------------- \n",)
+	print("The first three items in the list are: ", ex_list[:3])
+	# Why we slice the list from the beginning to the 3?
+	#Becuase the index is start with 0.
+
+	print("Three items from the middle of the list",ex_list[1:4])
+
+	print("The last three items in the list are: ", ex_list[2:])
+
+
+	print("\n")
+	print("----------------Your Pizza and My Pizza---------------- \n",)
+
+	
+
+
+	 
+
+
 
 if __name__ == "__main__":
 
