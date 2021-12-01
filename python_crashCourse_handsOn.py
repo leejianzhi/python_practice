@@ -158,9 +158,21 @@ def list_slicing():
 	print("\n")
 	print("----------------Your Pizza and My Pizza---------------- \n",)
 
-	
+
+	my_pizza = ["cheese","chicken","beef"]
+
+	friend_pizza = my_pizza[:]
+	friend_pizza.append('Fruit')
+
+	print("These are my favourite pizza: ",my_pizza)
+	print("These are my friend's pizza: ",friend_pizza)
+
+	for mypizza in my_pizza:
+		print("My favourite pizza are: ",mypizza)
 
 
+	for friendpizza in friend_pizza:
+		print("My friends's favourite pizza are: ",friendpizza)
 	 
 
 
