@@ -177,7 +177,27 @@ def list_slicing():
 
 
 
+
+def chap_5():
+	print("-------------------------------------")
+	print("practice for Tuples")
+
+	new_tuples = ('beef','pork','shrimp','chicken','fruit')
+
+	for print_tuples in new_tuples:
+		print("We provide :",print_tuples)
+
+	#test for if the tuples can be modified
+	#new_tuples[0] = 'new'
+
+	#other way around to modify tuples
+	new_tuples = ('new_001','new_002','shrimp','chicken','fruit')
+
+	for print_tuples in new_tuples:
+		print("We provide new menu:",print_tuples)
+
 if __name__ == "__main__":
 
 
-	list_slicing()
+	
+	chap_5()
