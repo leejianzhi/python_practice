@@ -216,7 +216,8 @@ def chap5_if():
 
 	#different ages in human life
 
-	user_input = int(input("Please input a number of age to determine the stage of life: "))
+	#user_input = int(input("Please input a number of age to determine the stage of life: "))
+	"""
 
 	if user_input < 2:
 		print("This is a newborn.")
@@ -231,6 +232,30 @@ def chap5_if():
 		print("This is an adult.")
 	else:
 		print("This is a senior.")
+
+	"""
+	user_list = ['admin','tom','jerry','mike','rose']
+	username_input = input("Please enter your username: ")
+	if user_list:
+		for userList in user_list:
+			if username_input == 'admin':
+				print("Hello admin, would you like to see a status report?")
+				break
+			elif username_input == 'tom':
+				print("Hello tom, thank you for logging in again.")
+				break
+			elif username_input == "mike":
+				print("Hello Mike, thank you for logging in again.")
+				break
+			elif username_input == "rose":
+				print("Hello Rose, thank you for logging in again.")
+				break
+			else:
+				print("Sorry, your username have not registered in our system.")
+				break
+
+	else:
+		print("There is no users.")
 
 if __name__ == "__main__":
 
