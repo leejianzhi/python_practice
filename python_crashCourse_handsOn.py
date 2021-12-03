@@ -196,8 +196,44 @@ def chap_5():
 	for print_tuples in new_tuples:
 		print("We provide new menu:",print_tuples)
 
+
+def chap5_if():
+
+	#alien practice
+
+	#user_input = input("What color of Alien you want to kill? ")
+
+	#alien_color = ['green','yellow','red']
+
+	#if user_input == 'green':
+	#	print("You killed a green alien and got 5 points")
+
+	#elif user_input == 'red':
+	#	print("You killed a yellow alien and got 10 points")
+
+	#else:
+	#	print("You killed a red alien and got 15 points")
+
+	#different ages in human life
+
+	user_input = int(input("Please input a number of age to determine the stage of life: "))
+
+	if user_input < 2:
+		print("This is a newborn.")
+
+	elif user_input in range(2,4):
+		print("This is an infant")
+	elif user_input in range(4,13):
+		print("This is a todd")
+	elif user_input in range(13,20):
+		print("This is a teenager")
+	elif user_input in range(20,65):
+		print("This is an adult.")
+	else:
+		print("This is a senior.")
+
 if __name__ == "__main__":
 
 
 	
-	chap_5()
+	chap5_if()
