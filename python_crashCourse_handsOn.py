@@ -256,6 +256,31 @@ def chap5_if():
 
 	else:
 		print("There is no users.")
+	print("\n")
+	print("-----------------------------------------------------")
+	print("Compare the new username and current username list.")
+	print("-----------------------------------------------------")
+
+	current_userlist = ["user1","user2","user3","user4","user5"]
+	print("The current userlist is: ",current_userlist)
+
+	new_userlist = ['user1','user2','newuser001','newuser002','newuser003']
+	print("The new userlist is: ",new_userlist)
+
+	used_username = []
+	canuse_username = []
+
+	for newusers in new_userlist:
+		if newusers in current_userlist:
+			used_username.append(newusers)
+		elif not newusers in current_userlist:
+			canuse_username.append(newusers)
+
+
+	print("The username: ",used_username,"is already in our system")
+	print("You can still use: ",canuse_username," to register in our system.")
+
+
 
 if __name__ == "__main__":
 
