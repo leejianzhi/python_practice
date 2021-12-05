@@ -318,8 +318,68 @@ def dict_prac():
 		elif name_list not in favourite_language.keys():
 			print(name_list,", please join us.")
 
+
+def chap_6_dict():
+
+	#chap 6.7
+	people = {
+
+			'jason':{
+
+					'first_name' : 'jason',
+					'last_name' : 'Li',
+					'location' : 'NY',
+
+			},
+
+			'mike':{
+
+					'first_name' : 'mike',
+					'last_name' : 'Li',
+					'location' : 'CA',
+
+			},
+
+
+			'july':{
+
+					'first_name' : 'kuly',
+					'last_name' : 'Li',
+					'location' : 'PA',
+
+			},
+
+
+
+	}
+
+
+	for fullname,detail in people.items():
+		print("Username: ",fullname,"\n")
+
+		full_name = detail['first_name'] + " " + detail['last_name']
+		location = detail['location']
+
+
+		print("\tFull name: " + full_name.title())
+		print("\tLocation: " + location)
+
+
+	#chap 6.8 pets
+
+	kitty = {
+
+		'pets':['cat','tom']
+	}
+
+
+	for petsinfo in kitty['pets']:
+		print("The pets type is: ",petsinfo)
+	
+		print("The owner's name is: ",petsinfo)
+		
+
+
 if __name__ == "__main__":
 
-
-	
-	dict_prac()
+	chap_6_dict()
