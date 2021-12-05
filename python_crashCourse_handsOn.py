@@ -282,8 +282,44 @@ def chap5_if():
 
 
 
+def dict_prac():
+
+	new_dict = {
+
+			'first_name':'Jason',
+			'last_name':'Wang',
+			'age':'18',
+			'city':'NY'
+
+
+			}
+
+	for k,v in new_dict.items():
+		print(k+':',v)
+
+	print(new_dict['first_name'])
+
+
+	favourite_language = {
+
+						'Andy':'Python',
+						'Jerry':'C',
+						'Bob':'C++',
+						'Mary':'Java',
+						'Bin':'HTML',
+
+						}
+
+	new_list = ['joe','Andy','Jerry','Bob','Mary','Bin','Lily','Jason']
+
+	for name_list in new_list:
+		if name_list in favourite_language.keys():
+			print(name_list,", thanks for join the program")
+		elif name_list not in favourite_language.keys():
+			print(name_list,", please join us.")
+
 if __name__ == "__main__":
 
 
 	
-	chap5_if()
+	dict_prac()
