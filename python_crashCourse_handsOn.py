@@ -377,9 +377,40 @@ def chap_6_dict():
 		print("The pets type is: ",petsinfo)
 	
 		print("The owner's name is: ",petsinfo)
-		
 
 
+def while_loop():
+
+	magic = True
+
+	message = "\nPlease tell us what you want for your toppings: "
+	message += "\nInput 'quit' if you are finished."
+
+	while magic:
+
+		user_input = input(message)
+
+		if user_input == 'quit':
+			magic = False
+
+		else:
+			print("\nYou added topping: ",user_input)
+
+def show_ticket():
+
+	ask_age = True
+
+	message = "\n Please enter your age to determine a price for you:"
+
+	while ask_age:
+		user_input = int(input(message))
+
+		if user_input < 3:
+			print("Your ticket is free.")
+		elif user_input in range(3,13):
+			print("Your ticket is $10.")
+		elif user_input > 12:
+			print("Your ticket is $15.")
 if __name__ == "__main__":
 
-	chap_6_dict()
+	show_ticket()
