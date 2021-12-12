@@ -411,6 +411,35 @@ def show_ticket():
 			print("Your ticket is $10.")
 		elif user_input > 12:
 			print("Your ticket is $15.")
+
+def make_sandwich():
+
+	tag = True
+
+	sandwich_orders = ['tuna','beef','ham','pastrami','pastrami','pastrami','pastrami']
+
+	finished_sandwich = []
+
+	print("The Pastrami sandwich is sold out.")
+	while 'pastrami' in sandwich_orders:
+
+		sandwich_orders.remove('pastrami')
+		#print("The list after remove is :",sandwich_orders)
+
+		if 'pastrami' not in sandwich_orders:
+
+			for sandwich in sandwich_orders:
+				print("I made you a ",sandwich, " sandwich")
+				finished_sandwich.append(sandwich)
+
+			print("Today, I made ",finished_sandwich, "sandwiches for customers.")
+		
+	
+
+
+
+
+
 if __name__ == "__main__":
 
-	show_ticket()
+	make_sandwich()
