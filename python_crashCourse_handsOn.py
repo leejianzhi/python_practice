@@ -437,9 +437,17 @@ def make_sandwich():
 	
 
 
+def make_shirt(size,print_sentence = 'default print'):
+
+
+	print('You seleted a T-shirt with size: ',size)
+	print('There will be a sentence printed on your T-shirt is: ',print_sentence)
+
 
 
 
 if __name__ == "__main__":
 
-	make_sandwich()
+	size = ''
+	sentence = ''
+	make_shirt('xxl')
