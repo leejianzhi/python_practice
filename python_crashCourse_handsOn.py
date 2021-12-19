@@ -475,10 +475,42 @@ def sandwich(*content):
 	for i in content:
 		print('-',i)
 
+#user profile prac
+
+def build_profile(first,last,**user_info):
+
+	profile = {}
+
+	profile['first_name'] = first
+	profile['last_name'] = last
+	for key, value in user_info.items():
+		profile[key] = value
+
+	return profile
+
+
+#8-14 car info
+
+
+def car_info(brand, model, **package):
+
+ 	carinfo = {}
+
+ 	carinfo['brand_name'] = brand,
+ 	carinfo['model'] = model
+
+ 	for key,value in package.items():
+ 		carinfo[key] = value
+
+ 	return carinfo
 
 if __name__ == "__main__":
 
 
-	sandwich('beef')
-	sandwich('beef','ham','cheese')
-	sandwich('egg','cheese','tomato')
+	#user_info = build_profile('david','li',location = 'CA',field = 'CS')
+
+	#print(user_info)
+
+	car = car_info('sabaru','outback',color='blue',tow_package='True')
+
+	print(car)
