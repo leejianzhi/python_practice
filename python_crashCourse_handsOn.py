@@ -445,9 +445,40 @@ def make_shirt(size,print_sentence = 'default print'):
 
 
 
+def magician_prac(names):
+
+	for name in names:
+		print('Welcome magician name is :',name)
+
+		
+
+
+
+def make_greate(greate):
+
+	new_list = []
+
+	for i in greate:
+		new_list.append(i + 'the greate')
+
+	for j in new_list:
+		print(j)
+
+
+#page 132 Sandwich prac
+
+def sandwich(*content):
+
+	
+
+	print("You ordered a sandwich with those contents: ")
+	for i in content:
+		print('-',i)
+
 
 if __name__ == "__main__":
 
-	size = ''
-	sentence = ''
-	make_shirt('xxl')
+
+	sandwich('beef')
+	sandwich('beef','ham','cheese')
+	sandwich('egg','cheese','tomato')
