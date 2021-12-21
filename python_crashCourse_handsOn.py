@@ -504,13 +504,32 @@ def car_info(brand, model, **package):
 
  	return carinfo
 
+ #chap9 Class prac
+
+ #Example code from the book
+
+class Dog():
+
+ 	def __int__(self, name, age):
+
+ 		self.name = name
+ 		self.age = age
+
+ 	def sit(self):
+
+ 		print(self.name.title() + "is now sitting.")
+
+ 	def roll_over(self):
+
+ 		print(self.name.title() + "rolled over!")
+
 if __name__ == "__main__":
 
-
+	Dog()
 	#user_info = build_profile('david','li',location = 'CA',field = 'CS')
 
 	#print(user_info)
 
-	car = car_info('sabaru','outback',color='blue',tow_package='True')
+	#car = car_info('sabaru','outback',color='blue',tow_package='True')
 
-	print(car)
+	#print(car)   
