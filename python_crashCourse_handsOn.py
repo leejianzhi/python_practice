@@ -517,15 +517,27 @@ class Dog():
 
  	def sit(self):
 
- 		print(self.name.title() + "is now sitting.")
+ 		print(self.name.title() + " is now sitting.")
 
  	def roll_over(self):
 
- 		print(self.name.title() + "rolled over!")
+ 		print(self.name.title() + " rolled over!")
+
+
+ 	
 
 if __name__ == "__main__":
 
-	Dog()
+	my_dog = Dog()
+
+	my_dog.name = 'boa'
+
+	my_dog.age = 6
+
+	print("Test for class, ","My dog's name is: ",my_dog.name, "My dog's age is: ",my_dog.age)
+	print(my_dog.sit())
+
+	
 	#user_info = build_profile('david','li',location = 'CA',field = 'CS')
 
 	#print(user_info)
