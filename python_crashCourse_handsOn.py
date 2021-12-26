@@ -524,18 +524,35 @@ class Dog():
  		print(self.name.title() + " rolled over!")
 
 
+class restaurant():
+
+	def __int__ (self,name,cuisine_type):
+
+		self.name = name
+		self.cuisine_type = cuisine_type
+
+	def describe_restaurant(self):
+
+		print("The restaurant name is: " + self.name.title())
+		print("The type of this restaurant is: " + self.cuisine_type.title())
+
+
+	def open_restaurant(self):
+
+		print("The " + self.name.title() + " is open.")
  	
 
 if __name__ == "__main__":
 
-	my_dog = Dog()
+	my_restaurant = restaurant()
 
-	my_dog.name = 'boa'
+	my_restaurant.name = 'Panda'
 
-	my_dog.age = 6
+	my_restaurant.cuisine_type = 'Chinese Fast Food'
 
-	print("Test for class, ","My dog's name is: ",my_dog.name, "My dog's age is: ",my_dog.age)
-	print(my_dog.sit())
+
+	my_restaurant.describe_restaurant()
+	my_restaurant.open_restaurant()
 
 	
 	#user_info = build_profile('david','li',location = 'CA',field = 'CS')
