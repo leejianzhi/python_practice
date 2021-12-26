@@ -115,14 +115,14 @@ def chapter_4():
 
 		i = i**3
 
-		print("The result of cube from number 1 to 10 is: ",i) 
+		print("The result of cube from number 1 to 10 is: ",i)
 
 
 	#list comprehension
 
 	cube_com = [i**3 for i in range(1,11)]
 
-	
+
 
 
 
@@ -173,7 +173,7 @@ def list_slicing():
 
 	for friendpizza in friend_pizza:
 		print("My friends's favourite pizza are: ",friendpizza)
-	 
+
 
 
 
@@ -375,7 +375,7 @@ def chap_6_dict():
 
 	for petsinfo in kitty['pets']:
 		print("The pets type is: ",petsinfo)
-	
+
 		print("The owner's name is: ",petsinfo)
 
 
@@ -433,8 +433,8 @@ def make_sandwich():
 				finished_sandwich.append(sandwich)
 
 			print("Today, I made ",finished_sandwich, "sandwiches for customers.")
-		
-	
+
+
 
 
 def make_shirt(size,print_sentence = 'default print'):
@@ -450,7 +450,7 @@ def magician_prac(names):
 	for name in names:
 		print('Welcome magician name is :',name)
 
-		
+
 
 
 
@@ -469,7 +469,7 @@ def make_greate(greate):
 
 def sandwich(*content):
 
-	
+
 
 	print("You ordered a sandwich with those contents: ")
 	for i in content:
@@ -540,25 +540,50 @@ class restaurant():
 	def open_restaurant(self):
 
 		print("The " + self.name.title() + " is open.")
- 	
+
+
+class user():
+
+	def __init__(self,first_name,last_name):
+
+		self.first_name = first_name
+		self.last_name = last_name
+
+	def describe_user(self):
+		print("The user's first name is: " + self.first_name.title())
+		print("The user's last name is: " + self.last_name.title())
+
+	def greeting_user(self):
+		print("Hello ",self.first_name.title() + " " + self.last_name.title())
+
+
 
 if __name__ == "__main__":
 
-	my_restaurant = restaurant()
+	#my_restaurant = restaurant()
 
-	my_restaurant.name = 'Panda'
+	#my_restaurant.name = 'Panda'
 
-	my_restaurant.cuisine_type = 'Chinese Fast Food'
+	#my_restaurant.cuisine_type = 'Chinese Fast Food'
 
 
-	my_restaurant.describe_restaurant()
-	my_restaurant.open_restaurant()
+	#my_restaurant.describe_restaurant()
+	#my_restaurant.open_restaurant()
 
-	
+	username = user("Rich","DZ")
+
+
+	username.describe_user()
+	username.greeting_user()
+
+	another_user = user("Second","user")
+
+	another_user.describe_user()
+	another_user.greeting_user()
 	#user_info = build_profile('david','li',location = 'CA',field = 'CS')
 
 	#print(user_info)
 
 	#car = car_info('sabaru','outback',color='blue',tow_package='True')
 
-	#print(car)   
+	#print(car)
