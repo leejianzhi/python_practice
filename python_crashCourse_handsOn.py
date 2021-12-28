@@ -530,16 +530,31 @@ class restaurant():
 
 		self.name = name
 		self.cuisine_type = cuisine_type
+		self.number_served = 0
 
 	def describe_restaurant(self):
 
 		print("The restaurant name is: " + self.name.title())
 		print("The type of this restaurant is: " + self.cuisine_type.title())
+		#print("The number of customers this restaurant served are: " + self.number_served)
 
 
 	def open_restaurant(self):
 
 		print("The " + self.name.title() + " is open.")
+
+	def read_serve_number(self):
+
+		print("The number of customer this restaurant served are: " + str(self.number_served))
+
+
+	def set_number_served(self,num_served):
+
+		self.number_served = num_served
+
+	def increment_number_served(self,incre_served):
+
+		self.number_served += incre_served
 
 
 class user():
@@ -558,28 +573,32 @@ class user():
 
 
 
+
 if __name__ == "__main__":
 
-	#my_restaurant = restaurant()
+	
 
-	#my_restaurant.name = 'Panda'
+	my_restaurant = restaurant()
 
-	#my_restaurant.cuisine_type = 'Chinese Fast Food'
+	my_restaurant.name = 'Panda'
+
+	my_restaurant.cuisine_type = 'Chinese Fast Food'
+
+	
+	my_restaurant.describe_restaurant()
+	my_restaurant.open_restaurant()
+
+	my_restaurant.set_number_served(15)
+	my_restaurant.read_serve_number()
+
+	my_restaurant.increment_number_served(10)
+	my_restaurant.read_serve_number()
+
+	my_restaurant.increment_number_served(20)
+	my_restaurant.read_serve_number()
 
 
-	#my_restaurant.describe_restaurant()
-	#my_restaurant.open_restaurant()
 
-	username = user("Rich","DZ")
-
-
-	username.describe_user()
-	username.greeting_user()
-
-	another_user = user("Second","user")
-
-	another_user.describe_user()
-	another_user.greeting_user()
 	#user_info = build_profile('david','li',location = 'CA',field = 'CS')
 
 	#print(user_info)
