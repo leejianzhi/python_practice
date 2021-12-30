@@ -563,6 +563,7 @@ class user():
 
 		self.first_name = first_name
 		self.last_name = last_name
+		self.login_attempts = 0
 
 	def describe_user(self):
 		print("The user's first name is: " + self.first_name.title())
@@ -570,14 +571,38 @@ class user():
 
 	def greeting_user(self):
 		print("Hello ",self.first_name.title() + " " + self.last_name.title())
+	
+	def read_login_attemps(self):
+  		print("The user trying to login for " +str(self.login_attempts) + " times.")
+
+	def increment_login_attempts(self,times):
+  		
+  		self.login_attempts = times + 1
+
+	def reset_login_attempts(self):
+  		self.login_attempts == 0
 
 
 
 
 if __name__ == "__main__":
 
+
+	my_user = user('Rich','DZ')
+
+	my_user.increment_login_attempts(1)
+	my_user.read_login_attemps()
+	my_user.increment_login_attempts(1)
+	my_user.read_login_attemps()
+	my_user.increment_login_attempts(1)
+
 	
 
+	my_user.describe_user()
+	my_user.read_login_attemps()
+	my_user.reset_login_attempts()
+	my_user.read_login_attemps()
+"""
 	my_restaurant = restaurant()
 
 	my_restaurant.name = 'Panda'
@@ -597,12 +622,4 @@ if __name__ == "__main__":
 	my_restaurant.increment_number_served(20)
 	my_restaurant.read_serve_number()
 
-
-
-	#user_info = build_profile('david','li',location = 'CA',field = 'CS')
-
-	#print(user_info)
-
-	#car = car_info('sabaru','outback',color='blue',tow_package='True')
-
-	#print(car)
+"""	
