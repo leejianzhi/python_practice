@@ -580,7 +580,7 @@ class user():
   		self.login_attempts += times
 
 	def reset_login_attempts(self):
-  		self.login_attempts == 0
+  		self.login_attempts = 0
 
 
 
@@ -600,6 +600,7 @@ if __name__ == "__main__":
 
 	my_user.describe_user()
 	my_user.read_login_attemps()
+	print("After reset")
 	my_user.reset_login_attempts()
 	my_user.read_login_attemps()
 """
