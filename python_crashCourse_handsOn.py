@@ -577,7 +577,7 @@ class user():
 
 	def increment_login_attempts(self,times):
   		
-  		self.login_attempts = times + 1
+  		self.login_attempts += times
 
 	def reset_login_attempts(self):
   		self.login_attempts == 0
