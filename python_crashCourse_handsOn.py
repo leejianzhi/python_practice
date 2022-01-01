@@ -583,26 +583,31 @@ class user():
   		self.login_attempts = 0
 
 
+class IceCreamStand(restaurant):
+
+	def __int__(self,name,cuisine_type):
+		super().__int__(name,cuisine_type)
+
+		self.flavor = flavor
+
+
+	def print_flavors(self):
+
+		for i in self.flavor:
+			print("The flavors are avaiable in store: ",i)
 
 
 if __name__ == "__main__":
 
+	my_icecream = IceCreamStand()
 
-	my_user = user('Rich','DZ')
+	my_icecream.name = 'iceQueen'
+	my_icecream.cuisine_type = 'IceCream Shop'
+	my_icecream.flavor = ['fruit','coffee','chocoldate']
 
-	my_user.increment_login_attempts(1)
-	my_user.read_login_attemps()
-	my_user.increment_login_attempts(1)
-	my_user.read_login_attemps()
-	my_user.increment_login_attempts(1)
+	my_icecream.describe_restaurant()
+	my_icecream.print_flavors()
 
-	
-
-	my_user.describe_user()
-	my_user.read_login_attemps()
-	print("After reset")
-	my_user.reset_login_attempts()
-	my_user.read_login_attemps()
 """
 	my_restaurant = restaurant()
 
