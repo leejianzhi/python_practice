@@ -596,9 +596,21 @@ class IceCreamStand(restaurant):
 		for i in self.flavor:
 			print("The flavors are avaiable in store: ",i)
 
+class admin(user):
+	def __int__(self,first_name,last_name):
+		super().__int__(first_name,last_name)
+
+		self.privileges = privileges
+
+	def show_privileges(self):
+
+		for i in self.privileges:
+			print("Admin can do such things: ",i)
+
 
 if __name__ == "__main__":
 
+	'''
 	my_icecream = IceCreamStand()
 
 	my_icecream.name = 'iceQueen'
@@ -607,7 +619,15 @@ if __name__ == "__main__":
 
 	my_icecream.describe_restaurant()
 	my_icecream.print_flavors()
+	'''
 
+	admin_user = admin('Admin','Super')
+	#admin_user.first_name = 'Admin'
+	#admin_user.last_name = 'Super'
+	admin_user.privileges = ['Can add post','Can delete post', 'can ban user']
+	admin_user.describe_user()
+	admin_user.greeting_user()
+	admin_user.show_privileges()
 """
 	my_restaurant = restaurant()
 
