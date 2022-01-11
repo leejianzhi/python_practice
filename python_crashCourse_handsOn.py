@@ -571,12 +571,12 @@ class user():
 
 	def greeting_user(self):
 		print("Hello ",self.first_name.title() + " " + self.last_name.title())
-	
+
 	def read_login_attemps(self):
   		print("The user trying to login for " +str(self.login_attempts) + " times.")
 
 	def increment_login_attempts(self,times):
-  		
+
   		self.login_attempts += times
 
 	def reset_login_attempts(self):
@@ -597,30 +597,69 @@ class IceCreamStand(restaurant):
 			print("The flavors are avaiable in store: ",i)
 
 class Admin(user):
-	
+
 
 	def __int__(self,first_name,last_name):
 		super().__int__(first_name,last_name)
 		self.privileges = Privileges()
 
-	
+
 
 #make an instance to be a property
 
 class Privileges():
 
-	def __int__(self, privileges=[]):
-		self.privileges = privileges
+	def __int__(self, a=['test']):
+ 		self.a= a
 
 
 	def show_privileges(self):
 
-		for i in self.privileges:
+		for i in self.a:
 			print("The privileges of admin are: ",i)
+
+
+#Car class code from the Page 147 Chapter 9
+
+class Car():
+
+	def __init__(self,make,model,year):
+		self.make = make
+		self.model = model
+		self.year = year
+		self.odometer_reading = 0
+
+	def get_descriptive_name(self):
+		long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+		return long_name.title()
+
+	def read_odometer(self):
+		print("This car has " + str(self.odometer_reading) + " miles on it.")
+
+	def update_odometer(self, mileage):
+		if mileage >= self.odometer_reading:
+			self.odometer_reading = mileage
+
+		else:
+			print("You can't roll back an odometer!")
+
+	def increment_odometer_reading(self,miles):
+		self.odometer_reading += miles
+
+class ElectricCar(Car):
+	def __init__(self,make,model,year):
+		super().__init__(make,model,year)
+
 
 if __name__ == "__main__":
 
-	'''
+
+
+
+
+
+
+'''
 	my_icecream = IceCreamStand()
 
 	my_icecream.name = 'iceQueen'
@@ -629,11 +668,8 @@ if __name__ == "__main__":
 
 	my_icecream.describe_restaurant()
 	my_icecream.print_flavors()
-	'''
 
-	admin_me = Privileges(['add more'])
-	admin_me.show_privileges()
-	
+'''
 """
 	my_restaurant = restaurant()
 
@@ -641,7 +677,7 @@ if __name__ == "__main__":
 
 	my_restaurant.cuisine_type = 'Chinese Fast Food'
 
-	
+
 	my_restaurant.describe_restaurant()
 	my_restaurant.open_restaurant()
 
@@ -654,4 +690,4 @@ if __name__ == "__main__":
 	my_restaurant.increment_number_served(20)
 	my_restaurant.read_serve_number()
 
-"""	
+"""
